@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 // Large CSS file with some unused styles
 import './ProductList.scss';
 
+// TODO: pagination, virtualized, windowing, split le composant
 export default function ProductListPage() {
     const [isProductLoading, setIsProductLoading] = useState(true);
     const [products, setProducts] = useState(

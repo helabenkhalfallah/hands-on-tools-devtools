@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import ProductDetailsPage from '../features/products/pages/ProductDetailsPage.jsx';
 import ProductListPage from '../features/products/pages/ProductListPage.jsx';
 
+// TODO: lazy
 const MainApp = () => {
     return (
         <Router>

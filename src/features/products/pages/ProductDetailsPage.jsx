@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 // Large CSS file with some unused styles
 import './ProductDetailsPage.scss';
 
+// TODO: carousel lazy, image placeholder, size,
 export default function ProductDetailsPage() {
     const [productData, setProductData] = useState(null);
     const [isProductLoading, setIsProductLoading] = useState(true);
@@ -24,6 +25,7 @@ export default function ProductDetailsPage() {
     }, [productId]);
 
     if (isProductLoading) {
+        // composant, lazy
         return (
             <Row justify="center" align="middle" gutter={[16, 16]}>
                 <Col span={24} style={{ textAlign: 'center' }} />
