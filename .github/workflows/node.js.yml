@@ -35,13 +35,13 @@ jobs:
         run: pnpm install
         
       - name: Documentation Update
-        run: pnpm update-docs
+        run: pnpm build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload only the docs folder
-          path: './docs'
+          # Upload only the dist folder
+          path: './dist'
         
   # Deploy documentation on GitHub Pages
   deploy:
