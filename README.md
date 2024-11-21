@@ -1,5 +1,5 @@
 
-# Hands-on Tools: DevTools - Inefficient Application Demo
+# Inefficient Application Analysis wit Tools and Devtools 🚀
 
 This repository demonstrates common **memory leaks**, **inefficiencies**, and **performance issues** in React applications. It serves as a practical tool to showcase how to identify, debug, and fix these problems using **Chrome DevTools** tools, including **Lighthouse**, **Performance**, **Memory**, **Network**, **Record**, **Coverage**, and **Source** tabs.
 
@@ -29,8 +29,8 @@ This repository demonstrates common **memory leaks**, **inefficiencies**, and **
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/helabenkhalfallah/hands-on-tools-devtools.git
-cd hands-on-tools-devtools
+git clone https://github.com/helabenkhalfallah/tools-devtools-app-analysis.git
+cd tools-devtools-app-analysis
 ```
 
 ### **2. Install Dependencies**
@@ -148,7 +148,7 @@ useEffect(() => {
 
 ## Conclusion
 
-This application is a hands-on demonstration of common React issues:
+This application is a demonstration of common issues:
 - Memory leaks
 - Inefficient rendering
 - Unused code
