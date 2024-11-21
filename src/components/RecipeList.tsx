@@ -15,9 +15,9 @@ interface Recipe {
 const RecipeList: React.FC<{ recipes: Recipe[] }> = ({ recipes }) => {
     const [selectedDishType, setSelectedDishType] = useState<string>('main course');
 
-    const filteredRecipes = recipes.filter((recipe) => recipe.dishTypes.includes(selectedDishType));
+    const filteredRecipes = recipes?.filter((recipe) => recipe.dishTypes.includes(selectedDishType));
 
-    const uniqueDishTypes = Array.from(new Set(recipes.flatMap((recipe) => recipe.dishTypes)));
+    const uniqueDishTypes = Array.from(new Set(recipes?.flatMap((recipe) => recipe.dishTypes) || []));
 
     return (
         <div>
