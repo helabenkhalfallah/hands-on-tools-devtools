@@ -34,7 +34,7 @@ jobs:
       - name: Installing NPM deps
         run: pnpm install
         
-      - name: Documentation Update
+      - name: Application Build
         run: pnpm build
 
       - name: Upload artifact
