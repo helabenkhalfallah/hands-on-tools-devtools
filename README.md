@@ -61,6 +61,13 @@ This demo app allows you to:
 4. **Inspect Network Activity**:
     - Use the **Network** tab to debug API calls, analyze load times, and spot inefficient resource usage.
 
+5. **Analyze Bundle Size**:
+    - **Vite Bundler Analyzer (`pnpm analyze`)**: Visualize the size of the app’s modules to identify oversized dependencies or inefficient packaging.
+    - **[Bundlephobia](https://bundlephobia.com/)**: Check the size, treeshaking support, and dependency impact of npm packages used in the app.
+
+6. **Assess Webpage Loading**:
+    - **WebPageTest**: Run comprehensive tests on your webpage to measure real-world performance, including loading speed, render times, and third-party resource impact.
+
 ---
 
 ## Key Components
@@ -85,26 +92,56 @@ This demo app allows you to:
 ## How to Analyze Issues
 
 ### **1. Detect Memory Leaks**
-- Open **Chrome DevTools**.
-- Navigate to the **Performance** tab.
-- Record interactions (e.g., toggling leaky components).
-- Look for growing **JS Heap** size or retained objects.
+1. Open **Chrome DevTools**.
+2. Navigate to the **Performance** tab:
+    - Click "Record" and interact with the app (e.g., toggling leaky components or navigating between views).
+    - Look for a continuously growing **JS Heap** size, which may indicate memory leaks.
+3. Use the **Memory** tab:
+    - Take a heap snapshot and analyze retained objects, closures, and detached DOM nodes.
 
 ### **2. Identify Unused Code**
-- Use the **Coverage tab** in Chrome DevTools:
-    - Start recording.
-    - Interact with the app.
-    - Observe unused CSS rules and JavaScript.
+1. Open **Chrome DevTools** and navigate to the **Coverage tab**:
+    - Click "Start Instrument Coverage and Reload Page" to begin recording.
+    - Interact with the app (e.g., navigating or triggering components).
+2. Observe the report:
+    - **CSS**: Look for rules that are not applied during interactions.
+    - **JavaScript**: Identify functions or scripts that are loaded but never executed.
+3. Export the coverage report to analyze large, unused files for optimization.
 
 ### **3. Debug Rendering Inefficiencies**
-- Use the **Performance Tab**:
-    - Record app interactions and look for bottlenecks.
-    - Highlight slow rendering times or inefficient component updates.
+1. Open the **Performance Tab** in Chrome DevTools:
+    - Click "Record" and perform app interactions (e.g., scrolling, clicking, or navigating).
+2. Analyze the timeline:
+    - Look for **long tasks** or **repeated layout shifts**.
+    - Identify components with slow rendering or excessive re-renders.
+3. Use **Flame Charts**:
+    - Pinpoint functions or components consuming the most time.
 
 ### **4. Inspect Network Activity**
-- Use the **Network Tab**:
-    - Track API calls and load times.
-    - Identify large or unnecessary resource downloads.
+1. Open the **Network Tab** in Chrome DevTools:
+    - Reload the app and monitor network requests.
+2. Analyze API calls:
+    - Check for failed or unnecessary requests.
+    - Monitor response times and payload sizes.
+3. Optimize resource loading:
+    - Identify large or unoptimized assets (e.g., images, JavaScript bundles).
+    - Ensure HTTP caching is utilized for static files.
+
+### **5. Analyze Bundles and Dependencies**
+1. Use **Vite Bundler Analyzer (`pnpm analyze`)**:
+    - Visualize the size of individual modules in your bundle.
+    - Identify oversized dependencies or unused packages.
+2. Use **[Bundlephobia](https://bundlephobia.com/)**:
+    - Analyze npm packages to detect size, treeshaking support, and dependency impact.
+    - Replace heavy or unused packages with lighter alternatives if possible.
+
+### **6. Assess Overall Page Performance**
+1. Run **Lighthouse** in Chrome DevTools:
+    - Analyze metrics such as Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), and Total Blocking Time (TBT).
+    - Review optimization recommendations, such as eliminating render-blocking resources or optimizing images.
+2. Use **WebPageTest**:
+    - Evaluate real-world page loading speeds and resource loading patterns.
+    - Compare results across multiple geographic locations for better insights.
 
 ---
 
