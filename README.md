@@ -47,7 +47,7 @@ pnpm dev
 
 ## Objectives
 
-This demo app allows you to:
+This application allows you to:
 
 1. **Analyze Memory Leaks**:
     - Use the **Memory** tab to identify retained objects, detached DOM nodes, and closures.
