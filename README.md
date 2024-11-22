@@ -25,7 +25,7 @@ This repository demonstrates common **memory leaks**, **inefficiencies**, and **
 
 ---
 
-## How to Use This Demo
+## How to Use This Application
 
 ### **1. Clone the Repository**
 ```bash
