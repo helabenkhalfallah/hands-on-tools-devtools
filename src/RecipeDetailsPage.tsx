@@ -18,7 +18,7 @@ const RecipeDetailsPage: React.FC = () => {
                     {
                         method: 'GET',
                         headers: {
-                            'x-rapidapi-key': 'ac833deea9msh3a10897bc96f4b0p137281jsnd306aaff2737',
+                            'x-rapidapi-key': 'xxxx',
                             'x-rapidapi-host':
                                 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
                         },
